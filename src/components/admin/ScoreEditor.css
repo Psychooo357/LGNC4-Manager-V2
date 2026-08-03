@@ -1,0 +1,93 @@
+.score-editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.score-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.score-column button {
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1e293b;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: .2s;
+
+}
+
+.score-column button:hover {
+
+    background: #3b82f6;
+
+    transform: scale(1.08);
+
+}
+
+.score-column input {
+
+    width: 55px;
+
+    height: 45px;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    border-radius: 10px;
+
+    border: 2px solid #334155;
+
+    background: #0f172a;
+
+    color: white;
+
+}
+
+.separator {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+.save-day {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.save-day button {
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.save-day button:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}

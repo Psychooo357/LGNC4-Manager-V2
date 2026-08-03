@@ -1,0 +1,72 @@
+.ranking-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 25px;
+
+    background: #1E293B;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+.ranking-table thead {
+
+    background: #0F172A;
+
+}
+
+.ranking-table th {
+
+    padding: 16px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+}
+
+.ranking-table td {
+
+    padding: 14px;
+
+    text-align: center;
+
+    border-top: 1px solid #334155;
+
+}
+
+.ranking-table tbody tr {
+
+    transition: .2s;
+
+}
+
+.ranking-table tbody tr:hover {
+
+    background: #293548;
+
+}
+
+.points {
+
+    color: #22C55E;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+.ranking-table td .club-badge {
+    justify-content: flex-start;
+}
+
+.ranking-table td .club-badge-logo {
+    width: 22px;
+    height: 22px;
+}

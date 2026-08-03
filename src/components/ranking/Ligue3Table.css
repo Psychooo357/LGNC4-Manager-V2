@@ -1,0 +1,68 @@
+.ligue3-table-container {
+    overflow-x: auto;
+}
+
+.ligue3-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1b1b1b;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ligue3-table th {
+    background: #252525;
+    padding: 12px;
+    font-weight: 700;
+}
+
+.ligue3-table td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.ligue3-table tr:hover {
+    background: #2b2b2b;
+}
+
+.club-col {
+    text-align: left;
+}
+
+.club-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.club-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.points {
+    color: #48d76a;
+    font-weight: bold;
+}
+
+.rank {
+    font-weight: bold;
+}
+
+.rank-1,
+.rank-2 {
+    color: #39d353;
+}
+
+.rank-3 {
+    color: #ffb347;
+}
+
+.rank-16,
+.rank-17,
+.rank-18 {
+    color: #ff5c5c;
+}
