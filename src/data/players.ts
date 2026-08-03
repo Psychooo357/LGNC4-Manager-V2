@@ -41,4 +41,9 @@ export const players: Player[] = [
         pseudo: "Mugen",
         clubId: 15,
     },
+    {
+        id: 9,
+        pseudo: "Hugu",
+        clubId: 9,
+    },
 ];
