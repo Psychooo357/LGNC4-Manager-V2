@@ -2,6 +2,7 @@ export interface Player {
     id: number;
     pseudo: string;
     clubId: number;
+    avatar: string;
 }
 
 export interface Club {
