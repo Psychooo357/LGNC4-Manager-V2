@@ -32,15 +32,39 @@
 }
 
 .club-cell {
-    .club-cell {
-        padding-left: 18px;
-    }
+    padding-left: 18px;
+    text-align: left;
+}
+
+.club-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+
+
+.club-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .club-logo {
     width: 36px;
     height: 36px;
     object-fit: contain;
+}
+
+.club-manager-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #475569;
+    flex-shrink: 0;
 }
 
 .points {

@@ -3,6 +3,7 @@ import ClubBadge from "../ClubBadge/ClubBadge";
 import "./Ligue3Table.css";
 
 import { getClubBySlug } from "../../utils/clubUtils";
+import { getPlayerByClubSlug } from "../../utils/playerUtils";
 
 import type { Standing } from "../../types/sportdb";
 
@@ -31,9 +32,8 @@ export default function Ligue3Table({
 
                 <tbody>
                     {standings.map((club) => {
-                        console.log(club.teamName, club.teamSlug);
                         const localClub = getClubBySlug(club.teamSlug);
-
+                        const manager = getPlayerByClubSlug(club.teamSlug);
 
                         const losses =
                             Number(club.matches) -
@@ -48,10 +48,20 @@ export default function Ligue3Table({
 
                                 <td className="club-cell">
                                     {localClub ? (
-                                        <ClubBadge
-                                            clubId={localClub.id}
-                                            size={22}
-                                        />
+                                        <div className="club-content">
+                                            <ClubBadge
+                                                clubId={localClub.id}
+                                                size={22}
+                                            />
+
+                                            {manager && (
+                                                <img
+                                                    src={manager.avatar}
+                                                    alt={manager.pseudo}
+                                                    className="club-manager-avatar"
+                                                />
+                                            )}
+                                        </div>
                                     ) : (
                                         <span>{club.teamName}</span>
                                     )}
