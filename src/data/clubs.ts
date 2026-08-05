@@ -22,7 +22,7 @@ export const clubs: Club[] = [
     {
         id: 1,
         name: "SC Aubagne Air Bel",
-        slug: "aubagne",
+        slug: "aubagne-fc",
         logo: aubagne,
         managed: false,
         stadium: "Stade de Lattre-de-Tassigny",

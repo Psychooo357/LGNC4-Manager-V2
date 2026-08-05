@@ -32,9 +32,9 @@
 }
 
 .club-cell {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    .club-cell {
+        padding-left: 18px;
+    }
 }
 
 .club-logo {

@@ -9,8 +9,12 @@
     height: 30px;
     object-fit: contain;
     flex-shrink: 0;
+    display: block;
 }
 
 .club-badge span {
+    display: flex;
+    align-items: center;
+    line-height: 1;
     font-weight: 600;
 }

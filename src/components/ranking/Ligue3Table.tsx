@@ -31,7 +31,9 @@ export default function Ligue3Table({
 
                 <tbody>
                     {standings.map((club) => {
+                        console.log(club.teamName, club.teamSlug);
                         const localClub = getClubBySlug(club.teamSlug);
+
 
                         const losses =
                             Number(club.matches) -
