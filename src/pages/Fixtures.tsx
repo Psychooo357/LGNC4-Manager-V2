@@ -68,17 +68,11 @@ export default function Fixtures() {
 
                         {matches.map((match: any) => {
                             const homeClub = getClubBySlug(
-                                match.homeParticipantNameUrl.replace(
-                                    "-fc",
-                                    ""
-                                )
+                                match.homeParticipantNameUrl
                             );
 
                             const awayClub = getClubBySlug(
-                                match.awayParticipantNameUrl.replace(
-                                    "-fc",
-                                    ""
-                                )
+                                match.awayParticipantNameUrl
                             );
 
                             return (

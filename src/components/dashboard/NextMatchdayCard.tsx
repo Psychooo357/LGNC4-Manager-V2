@@ -37,11 +37,11 @@ export default function NextMatchdayCard() {
         <Card title="🗓️ Prochaine journée">
             {nextMatches.map((match: any, index: number) => {
                 const homeClub = getClubBySlug(
-                    match.homeParticipantNameUrl.replace("-fc", "")
+                    match.homeParticipantNameUrl
                 );
 
                 const awayClub = getClubBySlug(
-                    match.awayParticipantNameUrl.replace("-fc", "")
+                    match.awayParticipantNameUrl
                 );
 
                 return (
