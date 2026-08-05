@@ -28,37 +28,42 @@ export default function Players() {
                                 borderRadius: "16px",
                                 padding: "20px",
                                 textAlign: "center",
+                                boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
                             }}
                         >
-                            <div
+                            <img
+                                src={player.avatar}
+                                alt={player.pseudo}
                                 style={{
-                                    width: "80px",
-                                    height: "80px",
+                                    width: "90px",
+                                    height: "90px",
                                     borderRadius: "50%",
-                                    background: "#2d3a52",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    margin: "0 auto 15px",
-                                    fontSize: "32px",
+                                    objectFit: "cover",
+                                    objectPosition: "center",
+                                    border: "3px solid #ffffff30",
+                                    marginBottom: "15px",
+                                }}
+                            />
+
+                            <h2
+                                style={{
+                                    margin: 0,
+                                    color: "#fff",
                                 }}
                             >
-                                👤
-                            </div>
-
-                            <h2>{player.pseudo}</h2>
+                                {player.pseudo}
+                            </h2>
 
                             {club && (
-                                <>
-                                    <p
-                                        style={{
-                                            color: "#9ca3af",
-                                            marginTop: "10px",
-                                        }}
-                                    >
-                                        {club.name}
-                                    </p>
-                                </>
+                                <p
+                                    style={{
+                                        color: "#9ca3af",
+                                        marginTop: "8px",
+                                        marginBottom: 0,
+                                    }}
+                                >
+                                    {club.name}
+                                </p>
                             )}
                         </div>
                     );
