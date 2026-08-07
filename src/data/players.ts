@@ -52,7 +52,7 @@ export const players: Player[] = [
     {
         id: 9,
         pseudo: "Hugu",
-        clubId: 10, // Paris 13
+        clubId: 9,
         avatar: "/pfps/hugu.jpg",
     },
 ];
