@@ -1,0 +1,31 @@
+.last-results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.last-result {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    min-height: 44px;
+}
+
+.last-result-team {
+    display: flex;
+    align-items: center;
+}
+
+.last-result-team.home {
+    justify-content: flex-start;
+}
+
+.last-result-team.away {
+    justify-content: flex-end;
+}
+
+.last-result-score {
+    min-width: 70px;
+    text-align: center;
+    font-size: 18px;
+}

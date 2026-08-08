@@ -3,6 +3,7 @@ import ClubBadge from "../ClubBadge/ClubBadge";
 
 import { useLeague } from "../../context/LeagueContext";
 import { getClubBySlug } from "../../utils/clubUtils";
+import "./LastResultsCard.css";
 
 export default function LastResultsCard() {
     const { results, loading } = useLeague();
@@ -25,50 +26,45 @@ export default function LastResultsCard() {
 
     return (
         <Card title="🌍 Derniers résultats">
-            {results.map((match: any) => {
-                const homeClub = getClubBySlug(match.homeTeamSlug);
-                const awayClub = getClubBySlug(match.awayTeamSlug);
+            <div className="last-results-list">
+                {results.map((match: any) => {
+                    const homeSlug =
+                        match.homeParticipantNameUrl
+                    const awaySlug =
+                        match.awayParticipantNameUrl
+                    const homeClub = getClubBySlug(homeSlug);
+                    const awayClub = getClubBySlug(awaySlug);
 
-                return (
-                    <div
-                        key={match.id}
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr auto 1fr",
-                            alignItems: "center",
-                            marginBottom: 12,
-                            gap: 16,
-                        }}
-                    >
-                        <div style={{ justifySelf: "start" }}>
-                            {homeClub && (
-                                <ClubBadge
-                                    clubId={homeClub.id}
-                                    size={24}
-                                />
-                            )}
-                        </div>
-
-                        <strong
-                            style={{
-                                textAlign: "center",
-                                minWidth: 70,
-                            }}
+                    return (
+                        <div
+                            key={match.eventId}
+                            className="last-result"
                         >
-                            {match.homeScore} - {match.awayScore}
-                        </strong>
+                            <div className="last-result-team home">
+                                {homeClub && (
+                                    <ClubBadge
+                                        clubId={homeClub.id}
+                                        size={28}
+                                    />
+                                )}
+                            </div>
 
-                        <div style={{ justifySelf: "end" }}>
-                            {awayClub && (
-                                <ClubBadge
-                                    clubId={awayClub.id}
-                                    size={24}
-                                />
-                            )}
+                            <strong className="last-result-score">
+                                {match.homeScore} - {match.awayScore}
+                            </strong>
+
+                            <div className="last-result-team away">
+                                {awayClub && (
+                                    <ClubBadge
+                                        clubId={awayClub.id}
+                                        size={28}
+                                    />
+                                )}
+                            </div>
                         </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
         </Card>
     );
 }
